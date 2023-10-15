@@ -4,6 +4,7 @@ import styles from '@site/src/components/labelselector.module.css';
 
 const SELECT_VALUE_KEY = "SelectedInputLabel";
 typeof window !== 'undefined' && window;
+localStorage.setItem(SELECT_VALUE_KEY, JSON.stringify({ value: "GP2040", label: "GP2040"}));
 
 const inputLabels = [
     { value: "GP2040", label: "GP2040"},
