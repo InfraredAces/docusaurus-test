@@ -3,6 +3,7 @@ import Select from 'react-select';
 import styles from '@site/src/components/labelselector.module.css';
 
 const SELECT_VALUE_KEY = "SelectedInputLabel";
+typeof window !== 'undefined' && window;
 
 const inputLabels = [
     { value: "GP2040", label: "GP2040"},
@@ -78,7 +79,7 @@ export default function InputLabelSelector() {
 
 export function Hotkey(props) {
     const [hotkeyCombo, setHotkeyCombo] = useState(null)
-    let inputLabel = { value: "GP2040", label: "GP2040"};
+    var inputLabel = { value: "GP2040", label: "GP2040"};
     if (typeof window !== 'undefined') {
         inputLabel = JSON.parse(localStorage.getItem(SELECT_VALUE_KEY));
     }
