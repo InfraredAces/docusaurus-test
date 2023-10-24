@@ -60,6 +60,23 @@ Hardware Availability: List where one can purchase the boards that share this co
 
 ## Documentation Templates
 
+### Page Template
+
+```md
+---
+title: TITLE
+# tags:
+# - 
+pagination_next: null
+pagination_prev: null
+---
+
+# Document Title
+
+CONTENT
+
+```
+
 ### Add-On Template
 
 ```md
