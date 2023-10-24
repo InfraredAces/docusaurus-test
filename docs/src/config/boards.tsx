@@ -301,11 +301,11 @@ const boards = {
 			),
 		},
 		{
-			name: 'Reflex Encode Fighting Board v1.3',
-			configName: 'ReflexEncodeV1',
+			name: 'Reflex Encode v1.2',
+			configName: 'ReflexEncodeV1.2',
 			pinout: null,
 			website: 'https://github.com/misteraddons/ReflexFightingBoard',
-			image: require('@site/docs/assets/boards/ReflexEncodeV1.jpg').default,
+			image: require('@site/docs/assets/boards/ReflexEncode_v1.2.jpg').default,
 			category: 'open',
 			desc: () => (
 				<p>
@@ -316,11 +316,11 @@ const boards = {
 			),
 		},
 		{
-			name: 'Reflex Encode Fighting Board v2',
-			configName: 'ReflexEncodeV2',
+			name: 'Reflex Encode v2.0',
+			configName: 'ReflexEncodeV2.0',
 			pinout: null,
 			website: 'https://github.com/misteraddons/ReflexFightingBoard',
-			image: require('@site/docs/assets/boards/ReflexEncodeV2.jpg').default,
+			image: require('@site/docs/assets/boards/ReflexEncode_v2.0.jpg').default,
 			category: 'open',
 			desc: () => (
 				<p>
