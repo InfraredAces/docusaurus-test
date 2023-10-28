@@ -1,0 +1,36 @@
+---
+title: Buzzer Speaker
+# tags:
+# -
+pagination_next: null
+pagination_prev: null
+---
+
+# Buzzer Speaker
+
+Purpose: The intended function and purpose of this add-on for an end user.
+
+![GP2040-CE Configurator - Add-Ons Buzzer](../assets/images/gpc-add-ons-buzzer.png)
+
+## Web Configurator Options
+
+- `Use buzzer` - Turns on/off the buzzer module.
+- `Buzzer Pin` - The GPIO pin used for the buzzer.
+- `Buzzer Volume` - Audio volume of buzzer. Ranges from 0-100.
+
+## Hardware
+
+### Requirements
+
+- 3-3.3V Piezo speaker
+
+The speaker only needs to have pins for power (VCC) and ground (GND). If there is an I/O pin on speaker, you can jump the pins and use only the VCC connected to RP2040 GPIO pin.
+
+### Installation
+
+- Plug into GPIO pin on board to VCC on speaker
+- Enter GPIO pin into web config
+
+## Miscellaneous Notes
+
+None

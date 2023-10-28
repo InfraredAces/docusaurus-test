@@ -1,24 +1,86 @@
 ---
 title: Keyboard Host Configuration
 # tags:
-# - 
+# -
 pagination_next: null
 pagination_prev: null
 ---
 
-import PinOption from './usb-host-add-on/_pin-options.md'
-import ExampleWiringDiagram from './usb-host-add-on/_example-wiring-diagram.md'
+import InputLabelSelector, {
+	Hotkey,
+} from "@site/src/components/LabelSelector.tsx";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import PinOption from "./usb-host-add-on/_pin-options.mdx";
+import ExampleWiringDiagram from "./usb-host-add-on/_example-wiring-diagram.mdx";
 
 # Keyboard Host Configuration
 
+Select the button labels to be displayed in the usage guide:
+
+<InputLabelSelector />
+<br />
+
+Purpose: This add-on is intended to allow you to use a keyboard as an input device and have it output as any other GP2040-CE device would.
+
 ![GP2040-CE Configurator - Keyboard Host Configuration](../assets/images/gpc-add-ons-keyboard-host-configuration.png)
+
+## Web Configurator Options
 
 <PinOption />
 
-## Hardware Requirements
+### Default Keybindings
 
- This add-on requires that you have something like the ![USB Passthrough Board](https://github.com/OpenStickCommunity/Hardware/tree/main/USB%20Passthrough%20Board) or a board with a USB passthrough port on it already.  
+| GP2040                           | Key          |
+| -------------------------------- | ------------ |
+| <Hotkey buttons={["Up"]}/>       | Arrow Up     |
+| <Hotkey buttons={["Down"]}/>     | Arrow Down   |
+| <Hotkey buttons={["Left"]}/>     | Arrow Left   |
+| <Hotkey buttons={["Right"]}/>    | Arrow Right  |
+| <Hotkey buttons={["B1"]}/>       | Shift Left   |
+| <Hotkey buttons={["B2"]}/>       | Z            |
+| <Hotkey buttons={["B3"]}/>       | Control Left |
+| <Hotkey buttons={["B4"]}/>       | Alt Left     |
+| <Hotkey buttons={["L1"]}/>       | C            |
+| <Hotkey buttons={["R1"]}/>       | Space        |
+| <Hotkey buttons={["L2"]}/>       | V            |
+| <Hotkey buttons={["R2"]}/>       | X            |
+| <Hotkey buttons={["S1"]}/>       | 5            |
+| <Hotkey buttons={["S2"]}/>       | 1            |
+| <Hotkey buttons={["L3"]}/>       | Equal        |
+| <Hotkey buttons={["R3"]}/>       | Minus        |
+| <Hotkey buttons={["A1"]}/>       | 9            |
+| <Hotkey buttons={["A2"]}/>       | F2           |
+| <Hotkey buttons={["Function"]}/> | None         |
 
-### Example Wiring Diagram
+## Hardware
+
+### Requirements
+
+This add-on requires that you have something like the [USB Passthrough Board](https://github.com/OpenStickCommunity/Hardware/tree/main/USB%20Passthrough%20Board) or a board with a USB passthrough port on it already.
+
+### Installation
+
+<Tabs groupId="boards" defaultValue="Raspberry Pi Pico">
+<TabItem value="Raspberry Pi Pico" label="Raspberry Pi Pico" default>
 
 <ExampleWiringDiagram />
+
+</TabItem>
+<TabItem value="RP2040 Advanced Breakout Board" label="RP2040 Advanced Breakout Board" default>
+
+TODO: Create RP2040 Advanced Breakout Board Instructions for USB Host Port Wiring
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel consequat tortor, blandit mollis justo. Aenean quis tellus in diam hendrerit vulputate in sed nibh. Sed turpis enim, laoreet eu lorem id, facilisis iaculis sapien. Ut dictum elit sed viverra mattis. Aliquam euismod id ipsum vitae sollicitudin. Vestibulum nisl purus, rhoncus quis est et, ornare sagittis ante. Curabitur pretium felis nec imperdiet pretium. Vivamus mauris elit, consequat quis placerat sit amet, suscipit nec leo. Mauris lacinia nulla ex, vitae suscipit ante ultricies quis. Praesent eu lacus lectus. Donec dapibus odio sit amet ornare consectetur. Duis nec orci nec nulla tempor aliquet.
+
+</TabItem>
+</Tabs>
+
+## Miscellaneous Notes
+
+As long as the keyboard has a USB plug, any keyboard should work with this addon, including wireless USB keyboards.
+
+Due to current implementation of Pico-PIO-USB and the add-on system, the following limitations are present.
+
+- The keyboard is limited to 6 key rollover, meaning that a maximum of 6 keyboard keys can be activated at a time. This is the case regardless if the keyboard being used normally has N key rollover (NKRO).
+- The keyboard is unable to affect the Input Mode on boot. The Input Mode must either be set using `Web Configurator > Settings` or an additional switch on the GP2040-CE device using the add-on.

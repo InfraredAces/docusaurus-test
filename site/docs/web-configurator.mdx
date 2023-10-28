@@ -1,16 +1,18 @@
 ---
 title: GP2040-CE Web Configurator
 # tags:
-# - 
+# -
 pagination_next: null
 pagination_prev: null
 ---
 
-import InputLabelSelector, { Hotkey } from "@site/src/components/LabelSelector.tsx";
+import InputLabelSelector, {
+	Hotkey,
+} from "@site/src/components/LabelSelector.tsx";
 
 # GP2040-CE Web Configurator
 
-Select the button labels to be displayed in the usage guide: 
+Select the button labels to be displayed in the usage guide:
 
 <InputLabelSelector />
 <br />
@@ -31,6 +33,7 @@ The options in the main menu are:
 - [Configuration > Keyboard Mapping](#keyboard-mapping) - Allows for remapping of keyboard keys to different controller inputs.
 - [Configuration > Profile Settings](#profile-settings) - Allows for remapping of GPIO pins to different buttons.
 - [Configuration > LED Configuration](#led-configuration) - Enable and configure RGB LEDs here.
+- [Configuration > Custom LED Theme](#custom-LED-Theme) - Enable and configure a custom LED theme.
 - [Configuration > Display Configuration](#display-configuration) - Enable and configure display options.
 - [Configuration > Add-Ons Configuration](#add-ons-configuration) - Enable and configure available add-ons.
 - [Configuration > Data Backup and Restoration](#data-backup-and-restoration) - Backup and restore settings.
@@ -170,7 +173,7 @@ If enabled, the Custom LED Theme will be available as another animation mode and
 - `Display Saver Timeout` - Will cause the display to turn off after the specified number of minutes. Pressing any input will cause the display to turn back on.
 - `Choose File` - This will allow you to upload your own image to be used for the splash screen. It is recommend that you use a two color 128x64 image (or one that is sized appropriately for your display). Uploading any other type of image will result in a conversion and sizing of the image automatically. If the image is inverted upon upload, just check off the `Invert` box.
 
-Check out our collection of great custom splash screens from the community [HERE](./community-splash-screens.md)
+Check out our collection of great custom splash screens from the community [HERE](./community-splash-screens.mdx)
 
 ## Add-Ons Configuration
 
