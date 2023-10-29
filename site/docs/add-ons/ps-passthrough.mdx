@@ -7,10 +7,8 @@ pagination_next: null
 pagination_prev: null
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import PinOption from "./usb-host-add-on/_pin-options.mdx";
-import ExampleWiringDiagram from "./usb-host-add-on/_example-wiring-diagram.mdx";
+import PinOption from "../snippets/_pin-options-USB-Host.mdx";
+import InstallUSBHostPort from "../snippets/_add-usb-host-port.mdx";
 
 # PS Passthrough
 
@@ -38,20 +36,7 @@ This add-on requires that you have something like the [USB Passthrough Board](ht
 
 ### Installation
 
-<Tabs groupId="boards" defaultValue="Raspberry Pi Pico">
-<TabItem value="Raspberry Pi Pico" label="Raspberry Pi Pico" default>
-
-<ExampleWiringDiagram />
-
-</TabItem>
-<TabItem value="RP2040 Advanced Breakout Board" label="RP2040 Advanced Breakout Board" default>
-
-TODO: Create RP2040 Advanced Breakout Board Instructions for USB Host Port Wiring
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel consequat tortor, blandit mollis justo. Aenean quis tellus in diam hendrerit vulputate in sed nibh. Sed turpis enim, laoreet eu lorem id, facilisis iaculis sapien. Ut dictum elit sed viverra mattis. Aliquam euismod id ipsum vitae sollicitudin. Vestibulum nisl purus, rhoncus quis est et, ornare sagittis ante. Curabitur pretium felis nec imperdiet pretium. Vivamus mauris elit, consequat quis placerat sit amet, suscipit nec leo. Mauris lacinia nulla ex, vitae suscipit ante ultricies quis. Praesent eu lacus lectus. Donec dapibus odio sit amet ornare consectetur. Duis nec orci nec nulla tempor aliquet.
-
-</TabItem>
-</Tabs>
+<InstallUSBHostPort />
 
 ## Miscellaneous Notes
 
