@@ -53,12 +53,32 @@ Supported controller types and their mapping is as follows:
 
 ### Requirements
 
-TODO: List any hardware that is required for the intended functioning of this add-on.
+SNES extension cable with individual wires, or just directly wire from the controller.
 
 ### Installation
 
-TODO: List instructions on how to install the hardware for use with this add-on.
+![GP2040-CE Configurator - SNES Controller Cable Connector Pinout](../assets/images/gpc-add-ons-snespad-input-pinout.svg)
+
+Please refer to the SNES Controller cable connector pinout found on [Super Nintendo Entertainment System: pinouts & protocol](https://www.repairfaq.org/REPAIR/F_SNES.html). The orientation of this pinout is looking back "into" the connector on the CABLE.
+
+:::caution
+
+Extension wire colors are inconsistent, so it's best to test continuity.
+
+:::
+
+Connect the SNES pins to the GPIO pins on the RP2040 board following this table.
+
+| SNES Pin | Pin on RP2040 Board          |
+| :------: | ---------------------------- |
+|    1     | 3V3 Out                      |
+|    2     | `CLOCK Pin` in web interface |
+|    3     | `LATCH Pin` in web interface |
+|    4     | `DATA Pin` in web interface  |
+|    5     | No connection                |
+|    6     | No connection                |
+|    7     | Ground                       |
 
 ## Miscellaneous Notes
 
-TODO: Provide any miscellaneous notes that an end user may want or need to know with regard to this add-on.
+None.
