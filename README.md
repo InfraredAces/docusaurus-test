@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Multiplatform Gamepad Firmware for RP2040
+  Multi-Platform Gamepad Firmware for RP2040
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 </p>
 
 <p>
-  GP2040-CE (Community Edition) is a gamepad firmware for the Raspberry Pi Pico and other boards based on the RP2040 microcontrollers that combines multiplatform compatibility, low latency and a rich feature set to provide endless customization possibilities without sacrificing performance.
+  GP2040-CE (Community Edition) is a gamepad firmware for the Raspberry Pi Pico and other boards based on the RP2040 microcontrollers that combines multi-platform compatibility, low latency and a rich feature set to provide endless customization possibilities without sacrificing performance.
 </p>
 
 <p>
@@ -38,7 +38,7 @@ Full documentation can be found at <https://gp2040-ce.info>
 * Left and Right stick emulation via D-pad inputs as well as dedicated toggle switches.
 * Dual direction via D-pad + LS/RS.
 * Reversed input via a button.
-* [Turbo and Turbo LED](https://gp2040-ce.info/#/add-ons?id=turbo) with selectable speed
+* [Turbo and Turbo LED](https://gp2040-ce.info/#/add-ons/turbo) with selectable speed
 * Per-button RGB LED support.
 * PWM Player indicator LED support (XInput only).
 * Multiple LED profiles support.
@@ -55,10 +55,10 @@ Input latency is tested using the methodology outlined at [WydD's inputlag.scien
 
 | Version | Mode | Poll Rate | Min | Max | Avg | Stdev | % on time | %1f skip | %2f skip |
 | - | - | - | - | - | - | - | - | - | - |
-| v0.7.0 | All modes (except PS4) | 1 ms | 0.53 ms | 1.36 ms | 0.86 ms | 0.25 ms | 95.91% | 4.09% | 0% |
-| v0.7.0 | PS4 Mode | 1 ms | 1.45 ms | 2.14 ms | 1.86 ms | 0.16 ms | 90.26% | 9.74% | 0% |
+| v0.7.5 | All modes (except PS4) | 1 ms | 0.45 ms | 1.28 ms | 0.77 ms | 0.24 ms | 96.27% | 3.73% | 0% |
+| v0.7.5 | PS4 Mode | 1 ms | 1.34 ms | 2.01 ms | 1.72 ms | 0.16 ms | 90.55% | 9.45% | 0% |
 
-Full results can be found in the [GP2040-CE Firmware Latency Test Results](https://docs.google.com/spreadsheets/d/1OLmVg04e2q4aY0tqSJuaHtD8YMNCQnP-MzzSTtQLVm4) Google Sheet.
+Full results can be found in the [GP2040-CE Firmware Latency Test Results](https://raw.githubusercontent.com/OpenStickCommunity/GP2040-CE/main/docs/latency_tests/GP2040-CE_Firmware_Latency_Test_Results.xlsx) .xlsx Sheet.
 
 ## Support
 
@@ -70,7 +70,7 @@ Want to help improve GP2040-CE? There are a bunch of ways to contribute!
 
 ### Community Participation
 
-Have an idea for a cool new feature, or just want to discuss some technical details with the devs? Join the [OpenStick GP2040-CE Discord](https://discord.gg/k2pxhke7q8) server to participate in our active and ever-growing community!
+Have an idea for a cool new feature, or just want to discuss some technical details with the developers? Join the [OpenStick GP2040-CE Discord](https://discord.gg/k2pxhke7q8) server to participate in our active and ever-growing community!
 
 ### Pull Requests
 
@@ -87,7 +87,7 @@ Please respect the coding style of the file(s) you are working in, and enforce t
 * [bitbank2](https://github.com/bitbank2) for the [OneBitDisplay](https://github.com/bitbank2/OneBitDisplay) and [BitBang_I2C](https://github.com/bitbank2/BitBang_I2C) libraries, which were ported for use with the Pico SDK
 * [arntsonl](https://github.com/arntsonl) for the amazing cleanup and feature additions that brought us to v0.5.0
 * [alirin222](https://github.com/alirin222) for the awesome turbo code ([@alirin222](https://twitter.com/alirin222) on Twitter)
-* [deeebug](https://github.com/deeebug) for improvements to the web-UI and fixing the PS3 homebutton issue
+* [deeebug](https://github.com/deeebug) for improvements to the web-UI and fixing the PS3 home button issue
 * [TheTrain](https://github.com/TheTrainGoes/GP2040-Projects) and [Fortinbra](https://github.com/Fortinbra) for helping keep our community chugging along
 * [PassingLink](https://github.com/passinglink/passinglink) for the technical details and code for PS4 implementation
-* [Youssef Habchi](https://youssef-habchi.com/) for allowing us to purchase a licence to use Road Rage font for the porject
+* [Youssef Habchi](https://youssef-habchi.com/) for allowing us to purchase a license to use Road Rage font for the project

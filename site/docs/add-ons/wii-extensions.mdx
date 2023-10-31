@@ -4,6 +4,7 @@ title: Wii Extensions
 # -
 pagination_next: null
 pagination_prev: null
+description: "Add-on to use various Wii controllers in conjunction with GP2040-CE to send inputs to supported systems"
 ---
 
 import Tabs from "@theme/Tabs";
@@ -12,7 +13,13 @@ import InputTable from "../snippets/_input-table.mdx";
 
 # Wii Extensions
 
-Purpose: The intended function and purpose of this add-on for an end user.
+Purpose: This add-on is intended to allow you to use various Wii controllers (e.g. Nunchuck, Classic Wii Controller, Guitar, Drums, Turntable, and Taiko) with GP2040-CE to be used with GP2040-CE supported systems.
+
+:::note
+
+The Wii Extensions add-on is not meant to work with Wii consoles.
+
+:::
 
 ![GP2040-CE Configurator - Wii Extensions](../assets/images/gpc-add-ons-wii-extensions.png)
 
@@ -25,81 +32,55 @@ Purpose: The intended function and purpose of this add-on for an end user.
 
 ### Controller Specific Options
 
-TODO: Update each controller, add image with labels
-
 <Tabs groupId="wii-extenstions" defaultValue="Nunchuck">
 <TabItem value="Nunchuck" label="Nunchuck" default>
 
-![GP2040-CE Configurator - Placeholder](../assets/gp2040-ce-placeholder.png)
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- Vestibulum at sem eu massa finibus sagittis.
+![GP2040-CE Configurator - Wii Nunchuck Controller](../assets/images/wii-extension-controllers/nunchuck.png)
 
 </TabItem>
 <TabItem value="Classic" label="Classic" default>
 
-![GP2040-CE Configurator - Placeholder](../assets/gp2040-ce-placeholder.png)
+:::note
 
-- Morbi hendrerit arcu quis ante lobortis posuere.
-- Sed vel augue non lectus feugiat maximus eu in felis.
-- Donec dapibus augue in pharetra accumsan.
-- Etiam in dolor pulvinar leo pellentesque imperdiet.
+- Classic Controller support includes Classic, Classic Pro, and NES/SNES Mini Controllers.
+- Original Classic Controller L & R triggers are analog sensitive, where Pro triggers are not.
+
+:::
+
+![GP2040-CE Configurator - Wii Classic Controller](../assets/images/wii-extension-controllers/classic.png)
 
 </TabItem>
 <TabItem value="Guitar" label="Guitar" default>
 
-![GP2040-CE Configurator - Placeholder](../assets/gp2040-ce-placeholder.png)
-
-- Duis laoreet orci quis felis convallis interdum.
-- Duis quis ante quis sem ultricies porta eu quis diam.
-- Nullam eget erat mattis, laoreet velit sit amet, malesuada purus.
-- Praesent et arcu consequat ante mollis sagittis ac vel neque.
-- Integer ut turpis eu mi dignissim pharetra.
+![GP2040-CE Configurator - Wii Guitar](../assets/images/wii-extension-controllers/guitar.png)
 
 </TabItem>
 <TabItem value="Drums" label="Drums" default>
 
-![GP2040-CE Configurator - Placeholder](../assets/gp2040-ce-placeholder.png)
+:::note
 
-- Sed sed nunc mattis, scelerisque massa nec, mollis neque.
-- Proin vel mi dictum, interdum erat at, maximus nulla.
-- Etiam ut tortor vel erat congue feugiat.
-- Cras laoreet urna lacinia tellus sollicitudin, ac convallis orci laoreet.
-- Integer condimentum ex at neque porta, finibus porta magna tempus.
-- Praesent tristique est sit amet mi suscipit rhoncus.
+Due to an accessory hardware issue, Drum & DJ turntable controllers may require hot-swapping from a Nunchuk or Classic controller before being usable.
+
+:::
+
+![GP2040-CE Configurator - Wii Guitar](../assets/images/wii-extension-controllers/drums.png)
 
 </TabItem>
 <TabItem value="Turntable" label="Turntable" default>
 
-![GP2040-CE Configurator - Placeholder](../assets/gp2040-ce-placeholder.png)
-
-- Vivamus ut nisl sed augue ornare mollis.
-- Morbi id tortor vel risus porta congue nec nec turpis.
-- Maecenas eget tortor convallis, faucibus tellus sed, facilisis magna.
-- Etiam euismod est eget risus pharetra efficitur.
-- Vestibulum porttitor sapien porttitor ligula dignissim, ut aliquet neque euismod.
-- Aenean lacinia ex ut ante tristique, et dapibus risus venenatis.
+![GP2040-CE Configurator - Wii Guitar](../assets/images/wii-extension-controllers/turntable.png)
 
 </TabItem>
 <TabItem value="Taiko" label="Taiko" default>
 
-![GP2040-CE Configurator - Placeholder](../assets/gp2040-ce-placeholder.png)
-
-- Sed pharetra orci sollicitudin, tincidunt ante eleifend, sodales sapien.
-- Morbi fringilla ex a sapien pharetra mollis a ac velit.
-- Cras ullamcorper mauris nec ex lobortis efficitur.
-- Pellentesque at tellus imperdiet, facilisis orci suscipit, tincidunt enim.
+![GP2040-CE Configurator - Wii Guitar](../assets/images/wii-extension-controllers/taiko.png)
 
 </TabItem>
 </Tabs>
 
-:::note
-
-Each of the options above uses the following GP2040 input labels.
+Each of the options above uses the following GP2040 input labels for input mapping from controller to GP2040-CE.
 
 <InputTable />
-
-:::
 
 ### Requirements
 
@@ -114,13 +95,13 @@ This add-on requires some way to connect to the following pins as needed from th
 
 Breakout boards are commercially available and searching online for "Wiichuck Adapter" will produce a number of options.
 
+Some boards will include a 3.3V output that is not necessary for this add-on to function.
+
 :::
 
 ### Installation
 
-TODO: List instructions on how to install the hardware for use with this add-on.
-
-Connect from board to controller as according to pins set in
+Connect from Wii controller/adapter to the GP2040-CE board according to GPIO pins set in the Web Configurator.
 
 - `PWR` - 3.3V to power the device (May also be labeled `+` or `VIN`)
 - `GND` - Ground (May also be labeled `-`)
@@ -129,6 +110,4 @@ Connect from board to controller as according to pins set in
 
 ## Miscellaneous Notes
 
-- Classic Controller support includes Classic, Classic Pro, and NES/SNES Mini Controllers.
-- Original Classic Controller L & R triggers are analog sensitive, where Pro triggers are not.
-- Due to an accessory hardware issue, Drum & DJ turntable controllers may require hot-swapping from a Nunchuk or Classic controller before being usable.
+None.
