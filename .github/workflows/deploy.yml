@@ -7,8 +7,8 @@ on:
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
-# permissions:
-#   contents: write
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -38,7 +38,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # 👇 Specify build output path
           path: site/build
       - name: Deploy to GitHub Pages
         id: deployment
